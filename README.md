@@ -1,4 +1,4 @@
-# PoC – Realtime Messaging System
+# PoC – Realtime Messenger
 
 This project contains the source code for a proof-of-concept (PoC) realtime messaging system for iOS and Android applications.
 
