@@ -44,6 +44,6 @@ Many other realtime messaging systems use a series of message queues and brokers
   - `$ flutter run                 # Start the Flutter application`
 
 ## Author
-- Tyler Suehr (tylersuehr7@yahoo.com)
+- [Tyler Suehr](https://www.linkedin.com/in/tyler-suehr/)
 
 > Copyright © 2024 Tyler R. Suehr
