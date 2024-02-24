@@ -1,5 +1,7 @@
 part of '../messages_screen.dart';
 
+const String _websocketEndpoint = "ws://10.0.0.247:10000";
+
 final class _MessagesScreenController extends Cubit<_MessagesState> {
   final IMessageService _messageService = injector<IMessageService>();
   final LoginManager loginManager;
@@ -90,7 +92,7 @@ final class _MessagesScreenController extends Cubit<_MessagesState> {
     final String authHeader = ServerClient.instance.dio.options.headers["Authorization"];
 
     webSocket = await WebSocket.connect(
-      "ws://10.0.0.247:10000/ws/messages/${chat.id}",
+      "$_websocketEndpoint/ws/messages/${chat.id}",
       headers: {
         "Authorization": authHeader,
       }
