@@ -4,7 +4,7 @@ import 'package:server_api_client_dart/server_api_client_dart.dart';
 
 const String _serverEndpoint = "http://10.0.0.247:10000";
 
-/// Uses singleton throughout application to access Cloak API.
+/// Uses singleton throughout application to access Server API.
 extension ServerClient on ServerApiClientDart {
   static final ServerApiClientDart instance = ServerApiClientDart(
     basePathOverride: _serverEndpoint,
@@ -35,7 +35,7 @@ extension ServerClient on ServerApiClientDart {
   }
 }
 
-/// Normalized error response structure from Cloak API.
+/// Normalized error response structure from Server API.
 final class ServerClientError extends DioException implements Equatable {
   final int statusCode;
   final DateTime timestamp;
@@ -69,7 +69,7 @@ final class ServerClientError extends DioException implements Equatable {
 }
 
 /// Converts all [DioException] into [ServerClientError].
-/// Knows how to parse normalized error response from Cloak API server.
+/// Knows how to parse normalized error response from Server API server.
 final class ServerClientErrorInterceptor extends InterceptorsWrapper {
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
